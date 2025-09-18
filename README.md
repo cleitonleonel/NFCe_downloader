@@ -172,12 +172,17 @@ NFCe_downloader/
 - Cache de sessões
 - Suporte a outros portais DFe
 
-## 📄 Licença
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+## Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+<img src="https://github.com/cleitonleonel/pypix/blob/master/qrcode.png?raw=true" alt="Your image title" width="250"/>
+
 ## 📞 Contato
 **Cleiton Leonel**
 - Email: cleiton.leonel@gmail.com
-- GitHub: [Seu perfil no GitHub]
+- LinkedIn: https://www.linkedin.com/in/cleiton-leonel-creton-331138167/
+- GitHub: https://github.com/cleitonleonel
 
 ## ⚠️ Aviso Legal
 Este software foi desenvolvido para fins educacionais e de automação legítima. Use apenas com certificados digitais próprios e para NFC-es que você tenha direito de acessar. O autor não se responsabiliza pelo uso indevido desta ferramenta.
