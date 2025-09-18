@@ -1,0 +1,17 @@
+certificados
+config.ini
+*.xml
+*.log
+*.db
+*.sqlite
+*.sqlite3
+*.bak
+*.backup
+*.tmp
+*.swp
+*.prg
+*.sh
+*.bat
+*.html
+*.pem
+*.pfx
