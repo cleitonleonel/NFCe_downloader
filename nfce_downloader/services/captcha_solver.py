@@ -1,12 +1,25 @@
+from pathlib import Path
+import sys
 import aiohttp
 import asyncio
 import configparser
 
-config = configparser.ConfigParser()
-config.read('config.ini', encoding="utf-8")
+config_paths = [
+    Path.cwd() / "config.ini",
+    Path(sys.argv[0]).parent / "config.ini",
+]
 
-api_key = config.get("captcha", "captcha_api_key")
-captcha_solver_engine = config.get("captcha", "captcha_solver_engine")
+config = configparser.ConfigParser()
+
+for path in config_paths:
+    if path.exists():
+        config.read(path, encoding="utf-8")
+        break
+else:
+    raise FileNotFoundError("config.ini não encontrado!")
+
+api_key = config.get("captcha", "captcha_api_key", fallback=None)
+captcha_solver_engine = config.get("captcha", "captcha_solver_engine", fallback=None)
 
 
 class CaptchaSolver:

@@ -101,7 +101,16 @@ async def download_xml(
         json_str = matches.group(1)
         json_data = json.loads(json_str)
     else:
-        print("Variável stringJson não encontrada")
+        error_message = "Variável stringJson não encontrada"
+        match = re.search(
+            r'<h4 class="textoErro">(.*?)</h4>',
+            response.text,
+            re.DOTALL
+        )
+        if match:
+            error_message = match.group(1)
+
+        return error_message
 
     filename = f"{nfce_key}-teste.xml"
     with open(filename, "w", encoding="utf-8") as f:
